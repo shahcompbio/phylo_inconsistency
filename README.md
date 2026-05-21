@@ -1,4 +1,4 @@
-# Statistical Inconsistency of Flip-based Perfect Phylogeny Objectives under Observation Error
+# Statistical Inconsistency of Error-Correction Objectives for Perfect Phylogeny Reconstruction
 
 This repository reproduces the analyses and figures from the paper "Statistical Inconsistency of Flip-based Perfect Phylogeny Objectives under Observation Error" by Gryte Satas, Matthew A. Myers, and Sohrab P. Shah. A preprint will be available soon. 
 
