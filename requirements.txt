@@ -1,0 +1,13 @@
+# Core numerical and plotting stack
+numpy
+scipy
+pandas
+matplotlib
+seaborn
+
+# Modeling and smoothing
+scikit-learn
+statsmodels
+
+# Notebook execution
+jupyter
