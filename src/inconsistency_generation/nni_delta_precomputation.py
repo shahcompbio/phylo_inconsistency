@@ -13,7 +13,7 @@ from inconsistency_generation.tree_generation import (
 
 
 def default_flip_weights(alpha: float, beta: float) -> tuple[float, float]:
-    return np.log((1 - alpha) / alpha), np.log((1 - beta) / beta)
+    return np.log((1 - beta) / alpha), np.log((1 - alpha) / beta)
 
 
 def precompute_nni_deltas_for_tree(

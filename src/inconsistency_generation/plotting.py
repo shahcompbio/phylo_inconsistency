@@ -95,7 +95,8 @@ _DELTA_CMAP = _delta_colormap()
 def draw_tstar_vertical(ax, topology, p_dict, d_by_label,
                         trunk_p_key="trunk", max_lw=16.0, min_lw=2.0, h_lw=2.0,
                         labels=True, leaf_labels=True, gamma=0.4, fontscale=1.0,
-                        leafsize=10, color=True, widths=False, dashed_edges=None):
+                        leafsize=10, color=True, widths=False, dashed_edges=None,
+                        leaf_colors=None):
     """Vertical rectilinear phylogeny colored and sized by Δ_e and p_e.
 
     - Branch length ∝ p_e
@@ -198,7 +199,8 @@ def draw_tstar_vertical(ax, topology, p_dict, d_by_label,
     y_range = max(y_vals) - min(y_vals) or 1.0
     for node, x in leaf_x.items():
         y = node_y[node]
-        ax.scatter(x, y, s=leafsize, color="#222222", zorder=15, edgecolors="none")
+        lc = (leaf_colors or {}).get(node, "#222222")
+        ax.scatter(x, y, s=leafsize, color=lc, zorder=15, edgecolors="none")
         if leaf_labels:
             ax.text(x, y - 0.05 * y_range, node, ha="center", va="top",
                     fontsize=11 * fontscale)
